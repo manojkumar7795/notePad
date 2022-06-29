@@ -15,8 +15,9 @@ code {
   display: flex;
   justify-content: flex-start;
   height: 100vh;
-  gap: 10px;
+  gap: 3px;
 }
+
 /* header css */
 
 .header {
@@ -62,22 +63,27 @@ code {
   margin-right: 10px;
 }
 /* notes textarea */
+.separator {
+  width: 1px;
+  border-right: 1px dashed #6c757d;
+}
 .textareaContainer {
   width: 70vw;
   height: 100vh;
   background-color: lightgray;
   border-radius: 10px;
   overflow: hidden;
-  padding: 10px 0;
+  padding: 10px;
 }
 .notesTextarea {
-  border: none;
-  outline: none;
-  background-color: blanchedalmond;
-  height: 90%;
-  width: 100%;
-  padding: 10px;
+  background-color: #ffebcd;
+  border: unset;
   font-size: 15px;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  height: calc(100% - 58px);
+  resize: none;
 }
 .notesTextarea::placeholder {
   color: darkgray;
@@ -94,10 +100,16 @@ code {
   padding: 10px 28px;
   font-size: 20px;
   color: white;
+  cursor: pointer;
+}
+.closeNotes {
+  color: #6c757d;
+  background-color: #d3d3d3;
+  border: 1px solid #6c757d;
 }
 .inputNotesFooter {
-  background-color: lightgray;
+  background-color: #d3d3d3;
   display: flex;
   justify-content: space-between;
-  padding: 10px 10px 0;
+  padding-top: 8px;
 }

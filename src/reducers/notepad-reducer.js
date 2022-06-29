@@ -38,7 +38,13 @@ export default function NotePadReducer(state = initialState, action) {
         (curElem) => curElem.id !== action.data
       );
       localStorage.setItem("Reduxnotes", JSON.stringify(updatedItems));
-      return { ...state, items: updatedItems };
+
+      return {
+        ...state,
+        items: updatedItems,
+        inputdata: "",
+        togglebutton: false,
+      };
 
     case UPDATE_NOTE_CONTENT:
       const item_todo_edited = items.find(
@@ -52,7 +58,6 @@ export default function NotePadReducer(state = initialState, action) {
       };
 
     case SAVE_NOTES:
-      console.log("savenotes");
       if (!inputdata) {
         alert("plz fill the data");
       } else if (isEditItem) {
